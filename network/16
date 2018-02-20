@@ -1,0 +1,2 @@
+pour associer une adresse ip a un om de domaine il faut ajouter une ligne dans /etc/hosts
+46.19.122.85	intra.42.fr
