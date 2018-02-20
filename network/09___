@@ -1,10 +1,11 @@
-Server:		192.168.43.1
-Address:	192.168.43.1#53
+Server:		10.51.1.42
+Address:	10.51.1.42#53
 
-Non-authoritative answer:
+Name:	42.fr
+Address: 163.172.250.12
 Name:	42.fr
 Address: 163.172.250.11
 Name:	42.fr
-Address: 163.172.250.12
+Address: 10.52.1.11
 
 # result of nslookup 42.fr
