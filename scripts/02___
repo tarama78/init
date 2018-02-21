@@ -1,4 +1,0 @@
-#!/bin/sh
-sudo sh -c "(sudo apt-get update -y && sudo apt-get upgrade -y) > /var/log/update_script.log 2>&1"
-sudo echo '0 4 * * 1 pi (sudo apt-get update -y && sudo apt-get upgrade -y) >> /var/log/update_script.log' >> /etc/crontab
-exit 0
