@@ -1,0 +1,2 @@
+le fichier contenant les cle RSA autorise a se connecter en ssh est:
+~/.ssh/known_hosts

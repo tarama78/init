@@ -1,0 +1,1 @@
+df /var/* | grep '/' | awk '{printf("%-10s %s\n", $1, $3)}'
