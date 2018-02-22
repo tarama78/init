@@ -1,0 +1,13 @@
+#!/bin/sh
+# pour faire une tache a heure reguliere il faut ajouter cette ligne dans /etc/crontab (il faut remplacer 04 par son path)
+# 0 0 * * * pi "sh 04"
+file_check="/etc/crontab"
+result_md=`md5sum $file_check`
+file_diff="/tmp/fichier_check_modif"
+if [ ! -f $file_diff ]; then
+	echo "$result_md" > $file_diff
+elif [ "$result_md" != "`cat $file_diff`" ]; then
+	echo "$result_md" > $file_diff
+	echo "file modified: $file_check" | mail -s "file modified: $file_check" tnicolas@student.42.fr
+fi
+exit 0
