@@ -8,6 +8,6 @@ if [ ! -f $file_diff ]; then
 	echo "$result_md" > $file_diff
 elif [ "$result_md" != "`cat $file_diff`" ]; then
 	echo "$result_md" > $file_diff
-	echo "file modified: $file_check" | mail -s "file modified: $file_check" tnicolas@student.42.fr
+	echo "file modified: $file_check" | mail -s "file modified: $file_check" root
 fi
 exit 0
