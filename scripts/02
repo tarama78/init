@@ -1,3 +1,6 @@
 #!/bin/sh
-sudo vim /etc/crontab '+normal Go0 4 * * 1 pi sudo sh -c "(sudo apt-get update -y && sudo apt-get upgrade -y) > /var/log/update_script.log 2>&1' '+wq'
+sudo touch /var/log/update_script.log
+echo "(sudo apt-get update -y && sudo apt-get upgrade -y) > /var/log/update_script.log 2>&1" > ~/script/update.sh
+sudo chmod 755 ~/script/update.sh
+sudo vim /etc/crontab '+normal Go0 4 * * 1 pi sudo /bin/sh ~/script.update.sh' '+wq'
 exit 0
